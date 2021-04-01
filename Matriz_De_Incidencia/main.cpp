@@ -2,7 +2,7 @@
 
 int main()
 {
-	MatrizInc<8,20> Grafo;
+	MatrizInc<10,20> Grafo;
 
 	Grafo.InsertEdge(0,1);
 	Grafo.InsertEdge(0,2);
