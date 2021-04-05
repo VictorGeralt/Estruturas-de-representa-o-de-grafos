@@ -163,32 +163,49 @@ Os testes serao feitas com 3 grafos diferentes:
 O segundo e o terceiro grafo foram criados a partidar da função **rand()** e foi colocada a seed 100 em todos os codigos para assegurar a igualdade dos 2 grafos.
  ### Tempo
 
- O tempo sera medido com a função **time** do linux e com o BFS saindo do Vertice 5. O valor do tempo de execuçao sera definido por uma media de 5 compilaçoes.
+ O tempo sera medido com a função **time** do linux e com o BFS saindo do Vertice 5. O valor do tempo de execuçao sera definido por uma media de 5 execuções.
 
 #### Lista De Adjacencia
 
-Grafo   | Tempo de Execução do codigo
+Grafo   | Tempo de Execução do DFS
 :---------: | :------:
  1 | 0m0,006s
- 2 | 0m0,008s
- 3 | 0m0,018s
+ 2 | 0m0,007s
+ 3 | 0m0,015s
+
+ Grafo   | Tempo de Execução do BFS
+:---------: | :------:
+ 1 | 0m0,005s
+ 2 | 0m0,006s
+ 3 | 0m0,017s
 
 #### Matriz De Adjacencia
 
-Grafo   | Tempo de Execução do codigo
+Grafo   | Tempo de Execução do DFS
 :---------: | :------:
- 1 | 0m0,003s
- 2 | 0m0,008s
+ 1 | 0m0,007s
+ 2 | 0m0,007s
  3 | 0m0,009s
+
+  Grafo   | Tempo de Execução do BFS
+:---------: | :------:
+ 1 | 0m0,005s
+ 2 | 0m0,006s
+ 3 | 0m0,008s
 
 #### Matriz De Incidencia
 
-Grafo   | Tempo de Execução do codigo
+Grafo   | Tempo de Execução do DFS
 :---------: | :------:
- 1 | 0m0,006s
- 2 | 0m0,008s
- 3 | 0m0,062s
+ 1 | 0m0,005s
+ 2 | 0m0,007s
+ 3 | 0m0,041s
 
+  Grafo   | Tempo de Execução do BFS
+:---------: | :------:
+ 1 | 0m0,005s
+ 2 | 0m0,006s
+ 3 | 0m0,048s
 
  ### Gasto de Memoria
 

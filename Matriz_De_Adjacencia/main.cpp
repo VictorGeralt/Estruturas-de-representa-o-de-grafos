@@ -1,7 +1,9 @@
 #include "MatrizAdj.cpp"
 
 int main()
-{
+{	
+
+	
 	// MatrizAdj<10> Grafo;
 
 	
@@ -54,13 +56,14 @@ int main()
 
 	// cout<<"\n\nMatriz de Adjacencia:"<<endl;
 	// Grafo.ImprimeGraph();
-
+	
+	
 	cout<<"\n\nDSF:"<<endl;
 	Grafo.DFS();
-
+	
+	
 	cout<<"\n\nBSF com o 5:"<<endl;
 	Grafo.BFS(5);
-
 
 	return 0;
 }
