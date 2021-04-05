@@ -51,8 +51,8 @@ int main()
    }
 	
 
-	cout<<"\n\nMatriz de Incidencia:"<<endl;
-	Grafo.ImprimeGraph();
+	// cout<<"\n\nMatriz de Incidencia:"<<endl;
+	// Grafo.ImprimeGraph();
 
 	cout<<"\n\nDSF:"<<endl;
 	Grafo.DFS();

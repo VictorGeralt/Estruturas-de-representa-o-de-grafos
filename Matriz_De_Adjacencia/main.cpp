@@ -52,8 +52,8 @@ int main()
 
 
 
-	cout<<"\n\nMatriz de Adjacencia:"<<endl;
-	Grafo.ImprimeGraph();
+	// cout<<"\n\nMatriz de Adjacencia:"<<endl;
+	// Grafo.ImprimeGraph();
 
 	cout<<"\n\nDSF:"<<endl;
 	Grafo.DFS();

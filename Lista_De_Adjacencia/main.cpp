@@ -236,7 +236,7 @@ int main(int argc, char const *argv[])
 	         GraphInsertEdge(G, G->adj[v], G->adj[w]);
 	   }
 
-	ImprimeGraph(G);
+	// ImprimeGraph(G);
 
 	DFS(G);
 	BFS(G, G->adj[10]);
