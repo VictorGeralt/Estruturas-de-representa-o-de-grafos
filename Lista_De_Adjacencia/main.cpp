@@ -185,38 +185,62 @@ void BFS(Graph G, Vertex s){
 
 int main(int argc, char const *argv[])
 {
-	Graph G = GraphInitialize(10);
+	// Graph G = GraphInitialize(10);
 
-	//Modelo de Grafo do slide 13 / aula 10
-	//S=0, W=1, R=2, V=3, T=4, X=5, U=6, Y=7
-	GraphInsertEdge(G, G->adj[0], G->adj[1]);
-	GraphInsertEdge(G, G->adj[0], G->adj[2]);
-	GraphInsertEdge(G, G->adj[1], G->adj[0]);
-	GraphInsertEdge(G, G->adj[1], G->adj[4]);
-	GraphInsertEdge(G, G->adj[1], G->adj[5]);
-	GraphInsertEdge(G, G->adj[2], G->adj[0]);
-	GraphInsertEdge(G, G->adj[2], G->adj[3]);
-	GraphInsertEdge(G, G->adj[3], G->adj[2]);
-	GraphInsertEdge(G, G->adj[4], G->adj[1]);
-	GraphInsertEdge(G, G->adj[4], G->adj[5]);
-	GraphInsertEdge(G, G->adj[4], G->adj[6]);
-	GraphInsertEdge(G, G->adj[5], G->adj[1]);
-	GraphInsertEdge(G, G->adj[5], G->adj[4]);
-	GraphInsertEdge(G, G->adj[5], G->adj[6]);
-	GraphInsertEdge(G, G->adj[5], G->adj[7]);
-	GraphInsertEdge(G, G->adj[6], G->adj[4]);
-	GraphInsertEdge(G, G->adj[6], G->adj[5]);
-	GraphInsertEdge(G, G->adj[6], G->adj[7]);
-	GraphInsertEdge(G, G->adj[7], G->adj[5]);
-	GraphInsertEdge(G, G->adj[7], G->adj[6]);
+	// //Modelo de Grafo do slide 13 / aula 10
+	// //S=0, W=1, R=2, V=3, T=4, X=5, U=6, Y=7
+	// GraphInsertEdge(G, G->adj[0], G->adj[1]);
+	// GraphInsertEdge(G, G->adj[0], G->adj[2]);
+	// GraphInsertEdge(G, G->adj[1], G->adj[0]);
+	// GraphInsertEdge(G, G->adj[1], G->adj[4]);
+	// GraphInsertEdge(G, G->adj[1], G->adj[5]);
+	// GraphInsertEdge(G, G->adj[2], G->adj[0]);
+	// GraphInsertEdge(G, G->adj[2], G->adj[3]);
+	// GraphInsertEdge(G, G->adj[3], G->adj[2]);
+	// GraphInsertEdge(G, G->adj[4], G->adj[1]);
+	// GraphInsertEdge(G, G->adj[4], G->adj[5]);
+	// GraphInsertEdge(G, G->adj[4], G->adj[6]);
+	// GraphInsertEdge(G, G->adj[5], G->adj[1]);
+	// GraphInsertEdge(G, G->adj[5], G->adj[4]);
+	// GraphInsertEdge(G, G->adj[5], G->adj[6]);
+	// GraphInsertEdge(G, G->adj[5], G->adj[7]);
+	// GraphInsertEdge(G, G->adj[6], G->adj[4]);
+	// GraphInsertEdge(G, G->adj[6], G->adj[5]);
+	// GraphInsertEdge(G, G->adj[6], G->adj[7]);
+	// GraphInsertEdge(G, G->adj[7], G->adj[5]);
+	// GraphInsertEdge(G, G->adj[7], G->adj[6]);
+
+	// 	//Grafo Esparço
+	// 	Graph G = GraphInitialize(100);
+	// 	srand(100);
+
+	// 	for (size_t i = 0; i < 250; i++)
+	//    {
+	//       int v = rand()%100;
+	//       int w = rand()%100;
+	//       if (v != w) 
+	//          GraphInsertEdge(G, G->adj[v], G->adj[w]);
+	//    }
+
+
+
+		//Grafo Denso de V^2
+		Graph G = GraphInitialize(100);
+		srand(100);
+
+		for (size_t i = 0; i < 10000; i++)
+	   {
+	      int v = rand()%100;
+	      int w = rand()%100;
+	      if (v != w) 
+	         GraphInsertEdge(G, G->adj[v], G->adj[w]);
+	   }
 
 	ImprimeGraph(G);
 
 	DFS(G);
-	BFS(G, G->adj[5]);
+	BFS(G, G->adj[10]);
 	
 	return 0;
 }
-
-
 
