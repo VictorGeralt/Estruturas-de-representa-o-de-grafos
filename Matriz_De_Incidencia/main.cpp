@@ -26,29 +26,29 @@ int main()
 	// Grafo.InsertEdge(7,6);
 
 
-	// 	//Grafo Esparço
-	// 	MatrizInc<100,250> Grafo;
+		//Grafo Esparço
+		MatrizInc<100,250> Grafo;
+		srand(100);
+
+		for (size_t i = 0; i < 250; i++)
+	   {
+	      int v = rand()%100;
+	      int w = rand()%100;
+	      if (v != w) 
+	         Grafo.InsertEdge(v,w);
+	   }
+
+	// 	//Grafo Denso
+	// 	MatrizInc<100,10000> Grafo;
 	// 	srand(100);
 
-	// 	for (size_t i = 0; i < 250; i++)
+	// 	for (size_t i = 0; i < 10000; i++)
 	//    {
 	//       int v = rand()%100;
 	//       int w = rand()%100;
 	//       if (v != w) 
 	//          Grafo.InsertEdge(v,w);
 	//    }
-
-	//Grafo Denso
-	MatrizInc<100,10000> Grafo;
-	srand(100);
-	
-	for (size_t i = 0; i < 10000; i++)
-   {
-      int v = rand()%100;
-      int w = rand()%100;
-      if (v != w) 
-         Grafo.InsertEdge(v,w);
-   }
 	
 
 	// cout<<"\n\nMatriz de Incidencia:"<<endl;
@@ -57,8 +57,8 @@ int main()
 	cout<<"\n\nDSF:"<<endl;
 	Grafo.DFS();
 
-	cout<<"\n\nBSF com o 10:"<<endl; 
-	Grafo.BFS(10);
+	cout<<"\n\nBSF com o 5:"<<endl; 
+	Grafo.BFS(5);
 
 
 	return 0;

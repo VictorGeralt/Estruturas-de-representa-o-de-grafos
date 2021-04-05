@@ -239,7 +239,7 @@ int main(int argc, char const *argv[])
 	// ImprimeGraph(G);
 
 	DFS(G);
-	BFS(G, G->adj[10]);
+	BFS(G, G->adj[5]);
 	
 	return 0;
 }
