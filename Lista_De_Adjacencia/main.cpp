@@ -33,14 +33,14 @@ struct TipoFila{
 //// procs FILA
 
 Fila* FFVazia(){
-	Fila *f = (Fila*) malloc(sizeof(Fila));
+	Fila *f = (Fila*) malloc(sizeof *f);;
 	f->head = NULL;
 	f->tail = NULL;
 	return f;
 }
 
 void Queue(Fila *f, int vertex){
-	Item *d = (Item *) malloc (sizeof(Item));
+	Item *d = (Item *) malloc (sizeof *d);
 	d->data = vertex;
 	d->prox = NULL;
 
@@ -74,14 +74,14 @@ Item* Dequeue(Fila *f){
 
 
 Vertex VertexInitialize(int value){
-	Vertex v = (Vertex)malloc (sizeof(Vertex));
+	Vertex v = (Vertex)malloc (sizeof * v);
 	v->value = value;
 	v->prox  = NULL;
 	return v;
 }
 
 Graph GraphInitialize(int V){
-	Graph G = (Graph) malloc (sizeof(Graph));
+	Graph G = (Graph)malloc (sizeof * G);
 	G->V = V;
 	G->E = 0;
 	G->adj = new Vertex[V];
@@ -116,26 +116,6 @@ void ImprimeGraph(Graph G){
 	}
 }
 
-void DestroyGraph(Graph G){
-	for (int i = 0; i < G->V; i++){
-		Vertex atual = G->adj[i];
-		while (atual != NULL)
-		{
-			Vertex prox = atual->prox;
-			free(atual);
-			atual->prox = NULL;
-			atual = prox;
-			prox = (atual == NULL ? NULL : atual->prox);
-		}
-		G->adj[i] = NULL;
-	}
-	
-	free(G->adj);
-	G->adj = NULL;
-	free(G);
-	G = NULL;
-		
-}
 
 void DFS_VISIT(Graph G, Vertex v, int *cor, int *d, int *f, int *tempo){
 	cor[v->value]  = 1;
@@ -264,9 +244,7 @@ int main(int argc, char const *argv[])
 	
 	BFS(G, G->adj[5]);
 
-	
-	DestroyGraph(G);
-	
+
 	return 0;
 }
 
