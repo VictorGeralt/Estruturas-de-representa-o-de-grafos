@@ -116,6 +116,27 @@ void ImprimeGraph(Graph G){
 	}
 }
 
+void DestroyGraph(Graph G){
+	for (int i = 0; i < G->V; i++){
+		Vertex atual = G->adj[i];
+		while (atual != NULL)
+		{
+			Vertex prox = atual->prox;
+			free(atual);
+			atual->prox = NULL;
+			atual = prox;
+			prox = (atual == NULL ? NULL : atual->prox);
+		}
+		G->adj[i] = NULL;
+	}
+	
+	free(G->adj);
+	G->adj = NULL;
+	free(G);
+	G = NULL;
+		
+}
+
 void DFS_VISIT(Graph G, Vertex v, int *cor, int *d, int *f, int *tempo){
 	cor[v->value]  = 1;
 	*tempo        += 1;
@@ -244,6 +265,7 @@ int main(int argc, char const *argv[])
 	BFS(G, G->adj[5]);
 
 	
+	DestroyGraph(G);
 	
 	return 0;
 }
