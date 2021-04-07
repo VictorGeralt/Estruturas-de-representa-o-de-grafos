@@ -1,6 +1,6 @@
 # Estruturas de representa o de grafos
 
-##Objetivo
+## Objetivo
 
 A teoria dos grafos ou de grafos é um ramo da matemática que estuda as relações entre os objetos de um determinado conjunto. Esse codigo tem o objetivo de comparar o uso de 3 tipos de grafos diferentes:
  - _Listas de Adjacencia_
@@ -83,10 +83,10 @@ void MatrizAdj<V>::BFS(int vertex ){
 }
 ```
 
-Para a Matriz de Adjacencia o BFS foi modificado para poder passar por todos vertices ligados com o vertice atual, verificando na matriz se estao conectados pela presença do **1** na casa da verificação. 
+Para a _Matriz de Adjacencia_ o BFS foi modificado para poder passar por todos vertices ligados com o vertice atual, verificando na matriz se estao conectados pela presença do **1** na casa da verificação. 
 
 
-### Matriz de Insidencia
+### Matriz de Incidencia
 
 #### DFS
 ```
