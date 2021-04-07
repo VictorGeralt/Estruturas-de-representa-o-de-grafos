@@ -1,4 +1,5 @@
 # Estruturas de representa o de grafos
+
 ##Objetivo
 
 A teoria dos grafos ou de grafos é um ramo da matemática que estuda as relações entre os objetos de um determinado conjunto. Esse codigo tem o objetivo de comparar o uso de 3 tipos de grafos diferentes:
@@ -17,6 +18,12 @@ Apos isso será analisado o tempo e o gasto de memoria para cada um.
 
 Todo codigo foi feito de uma adaptação da _"Lista_De_Adjacencia"_ que por sua vez foi feita inicialmente em **C** e foi convertida em **C++** para que nao ocorra diferença nos testes de tempo e gasto de memoria pela diferença de linguagem.
 Adaptaçoes gerais feitas foram a passagem do tipo _List_ para _int_, o tipo _Graph_ foi transformado numa classe que tem sua inicializaçao por template, Fazendo assim o codigo criar uma matriz mais simples.
+
+Para compilar pode ser usado o comando dentro de cada pasta:
+
+```
+g++ main.cpp -o grafo
+```
 
 
 ### Matriz de Adjacencia
@@ -209,28 +216,112 @@ Grafo   | Tempo de Execução do DFS
 
  ### Gasto de Memoria
 
-XXXXXX
+Para verificar o gasto de memoria foi usado o memusage com o comando:
+
+```
+-T ./app
+```
 
  #### Lista De Adjacencia
 
-Grafo   | Memoria Gasta
-:---------: | :------:
- 1 | XXXX
- 2 | XXXX
- 3 | XXXX
+ ##### DFS
 
-#### Matriz De Adjacencia
+ - Grafo 1
 
-Grafo   | Memoria Gasta
-:---------: | :------:
- 1 | XXXX
- 2 | XXXX
- 3 | XXXX
+	![Grafo](Lista_De_Adjacencia/Graficos/DFS.png)
 
-#### Matriz De Incidencia
+ - Grafo 2
 
-Grafo   | Memoria Gasta
-:---------: | :------:
- 1 | XXXX
- 2 | XXXX
- 3 | XXXX
+	![Grafo](Lista_De_Adjacencia/Graficos/EsparsoDFS.png)
+
+ - Grafo 3
+
+	![Grafo](Lista_De_Adjacencia/Graficos/DensoDFS.png)
+
+
+##### BFS
+
+ - Grafo 1
+
+	![Grafo](Lista_De_Adjacencia/Graficos/BFS.png)
+
+ - Grafo 2
+
+	![Grafo](Lista_De_Adjacencia/Graficos/EsparsoBFS.png)
+
+ - Grafo 3
+
+	![Grafo](Lista_De_Adjacencia/Graficos/DensoBFS.png)
+
+
+ #### Matriz De Adjacencia
+
+ ##### DFS
+
+ - Grafo 1
+
+	![Grafo](Matriz_De_Adjacencia/Graficos/DFS.png)
+
+ - Grafo 2
+
+	![Grafo](Matriz_De_Adjacencia/Graficos/EsparsoDFS.png)
+
+ - Grafo 3
+
+	![Grafo](Matriz_De_Adjacencia/Graficos/DensoDFS.png)
+
+
+##### BFS
+
+ - Grafo 1
+
+	![Grafo](Matriz_De_Adjacencia/Graficos/BFS.png)
+
+ - Grafo 2
+
+	![Grafo](Matriz_De_Adjacencia/Graficos/EsparsoBFS.png)
+
+ - Grafo 3
+
+	![Grafo](Matriz_De_Adjacencia/Graficos/DensoBFS.png)
+
+
+ #### Matriz De Incidencia
+
+ ##### DFS
+
+ - Grafo 1
+
+	![Grafo](Matriz_De_Incidencia/Graficos/DFS.png)
+
+ - Grafo 2
+
+	![Grafo](Matriz_De_Incidencia/Graficos/EsparsoDFS.png)
+
+ - Grafo 3
+
+	![Grafo](Matriz_De_Incidencia/Graficos/DensoDFS.png)
+
+
+##### BFS
+
+ - Grafo 1
+
+	![Grafo](Matriz_De_Incidencia/Graficos/BFS.png)
+
+ - Grafo 2
+
+	![Grafo](Matriz_De_Incidencia/Graficos/EsparsoBFS.png)
+
+ - Grafo 3
+
+	![Grafo](Matriz_De_Incidencia/Graficos/DensoBFS.png)
+
+
+### Analise Final
+
+Tanto os grafos BFS e DFS tiveram gastos parecidos de memoria e tempo, a maior diferença é entre estruturas.
+Para o primeiro grafo todos resultados foram muito parecidos mas com a _Matriz de Adjacencia_ sendo um pouco melhor no gasto de memoria.
+No segundo a _Lista de Adjacencia_ teve um desempenho melhor que os outros grafos principalmente em memoria.
+Por ultimo a _Matriz de Adjacencia_ teve um resultado melhor que todos os outros mantendo o mesmo gasto de memoria e gasto de tempo do segundo grafo.
+Gostaria de pontuar como a _Matriz de Incidencia_ se mostrou a pior estrutura principalmente no ultimo grafo, demonstrando um uso de memoria exorbitantemente maior que qualquer outra estrutura.
